@@ -1,20 +1,6 @@
 USE Vinito;
 GO
 
-/* Indices*/
-
-/* Indices Agrupados : solo por tabla*/
-CREATE TABLE Persona (
-    id_persona INT PRIMARY KEY, -- aquí tenemos un índice agrupado 
-    nombre VARCHAR(100),
-    id_documento INT,
-    numero_documento VARCHAR(20),
-    tipo_persona VARCHAR(20),
-    correo VARCHAR(100),
-    telefono VARCHAR(15),
-    direccion VARCHAR(150)
-);
-
 /* Indices No Agruapdos : buscar columnas
 que no son claves primarias */
 

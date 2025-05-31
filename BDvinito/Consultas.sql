@@ -67,3 +67,6 @@ FROM Entrada e
 JOIN Persona pe ON e.id_persona = pe.id_persona
 JOIN DetalleEntrada de ON e.id_entrada = de.id_entrada
 JOIN Producto pr ON de.id_producto = pr.id_producto;
+
+
+Select * FROM Historico;
