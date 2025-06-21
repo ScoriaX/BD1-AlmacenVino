@@ -20,4 +20,5 @@
 - Se añadieron **colecciones** de MongoDB.
 
 [Carpeta Principal SQL](BDvinito/principal_sql)
+
 [Carpeta Principal MongoDB](BDvinito/principal_mongoDB)
