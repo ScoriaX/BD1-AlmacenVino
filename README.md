@@ -16,3 +16,5 @@
 - Se añadieron **Procedimientos Almacenados**.
 - Se realizó una BD espejo en **MongoDB**.
 - Se añadieron **colecciones** de MongoDB.
+
+[Carpeta Principal SQL](BDvinito/principal_mongoDB)
