@@ -1,0 +1,226 @@
+[{
+  "_id": 1,
+  "nombre": "Malbec Reserva",
+  "descripcion": "Vino tinto argentino con notas de roble.",
+  "precio_compra": 20,
+  "precio_venta": 35,
+  "stock_actual": 50,
+  "id_categoria": 1,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Malbec",
+    "año_cosecha": {
+      "$date": "2020-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "Argentina",
+    "bodega": "Bodega Luigi Bosca",
+    "grado_alcohol": 13.5
+  }
+},
+{
+  "_id": 2,
+  "nombre": "Llavero de corcho",
+  "descripcion": "Llavero artesanal hecho con corcho natural.",
+  "precio_compra": 2,
+  "precio_venta": 5,
+  "stock_actual": 100,
+  "id_categoria": 2,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Corcho",
+    "color": "Marrón",
+    "dimensiones": "5cm x 3cm",
+    "tipo_accesorio": "Llavero"
+  }
+},
+{
+  "_id": 4,
+  "nombre": "Sauvignon Blanc Premium",
+  "descripcion": "Vino blanco chileno, fresco y con notas cítricas.",
+  "precio_compra": 18,
+  "precio_venta": 30,
+  "stock_actual": 40,
+  "id_categoria": 3,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Sauvignon Blanc",
+    "año_cosecha": {
+      "$date": "2021-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "Chile",
+    "bodega": "Viña Concha y Toro",
+    "grado_alcohol": 12.5
+  }
+},
+{
+  "_id": 5,
+  "nombre": "Rosé Provence",
+  "descripcion": "Vino rosado francés, elegante y afrutado.",
+  "precio_compra": 22,
+  "precio_venta": 38,
+  "stock_actual": 25,
+  "id_categoria": 4,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Grenache",
+    "año_cosecha": {
+      "$date": "2022-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "Francia",
+    "bodega": "Château Minuty",
+    "grado_alcohol": 13
+  }
+},
+{
+  "_id": 6,
+  "nombre": "Espumante Brut Nature",
+  "descripcion": "Espumante argentino seco, ideal para celebraciones.",
+  "precio_compra": 25,
+  "precio_venta": 45,
+  "stock_actual": 30,
+  "id_categoria": 5,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Chardonnay",
+    "año_cosecha": {
+      "$date": "2021-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "Argentina",
+    "bodega": "Bodegas Salentein",
+    "grado_alcohol": 12
+  }
+},
+{
+  "_id": 7,
+  "nombre": "Abridor de acero inoxidable",
+  "descripcion": "Abridor profesional tipo sommelier.",
+  "precio_compra": 5,
+  "precio_venta": 12,
+  "stock_actual": 70,
+  "id_categoria": 6,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Acero inoxidable",
+    "color": "Plateado",
+    "dimensiones": "12cm x 2cm",
+    "tipo_accesorio": "Abridor"
+  }
+},
+{
+  "_id": 8,
+  "nombre": "Decantador de vidrio soplado",
+  "descripcion": "Decantador elegante para vinos añejos.",
+  "precio_compra": 15,
+  "precio_venta": 35,
+  "stock_actual": 20,
+  "id_categoria": 7,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Vidrio",
+    "color": "Transparente",
+    "dimensiones": "25cm x 10cm",
+    "tipo_accesorio": "Decantador"
+  }
+},
+{
+  "_id": 9,
+  "nombre": "Caja de regalo clásica",
+  "descripcion": "Caja de madera con espacio para 2 botellas.",
+  "precio_compra": 10,
+  "precio_venta": 25,
+  "stock_actual": 35,
+  "id_categoria": 8,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Madera",
+    "color": "Caoba",
+    "dimensiones": "30cm x 20cm x 10cm",
+    "tipo_accesorio": "Caja"
+  }
+},
+{
+  "_id": 10,
+  "nombre": "Tapón de vacío premium",
+  "descripcion": "Tapón que conserva el vino al vacío",
+  "precio_compra": 3,
+  "precio_venta": 8,
+  "stock_actual": 50,
+  "id_categoria": 10,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Silicona",
+    "color": "Negro",
+    "dimensiones": "3cm x 3cm",
+    "tipo_accesorio": "Tapón"
+  }
+},
+{
+  "_id": 11,
+  "nombre": "Copa cristal Borgoña",
+  "descripcion": "Copa para vinos tintos con cuerpo",
+  "precio_compra": 6,
+  "precio_venta": 14,
+  "stock_actual": 60,
+  "id_categoria": 9,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Cristal",
+    "color": "Transparente",
+    "dimensiones": "20cm x 8cm",
+    "tipo_accesorio": "Copa"
+  }
+},
+{
+  "_id": 12,
+  "nombre": "Tempranillo Reserva",
+  "descripcion": "Vino tinto español de crianza media",
+  "precio_compra": 19,
+  "precio_venta": 33,
+  "stock_actual": 40,
+  "id_categoria": 1,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Tempranillo",
+    "año_cosecha": {
+      "$date": "2020-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "España",
+    "bodega": "Marqués de Cáceres",
+    "grado_alcohol": 13.5
+  }
+},
+{
+  "_id": 13,
+  "nombre": "Moscatel Dulce",
+  "descripcion": "Vino dulce portugués",
+  "precio_compra": 21,
+  "precio_venta": 36,
+  "stock_actual": 30,
+  "id_categoria": 15,
+  "tipo_producto": "Vino",
+  "detalles_vino": {
+    "cepa": "Moscatel",
+    "año_cosecha": {
+      "$date": "2021-01-01T00:00:00.000Z"
+    },
+    "pais_origen": "Portugal",
+    "bodega": "José Maria da Fonseca",
+    "grado_alcohol": 15
+  }
+},
+{
+  "_id": 14,
+  "nombre": "Kit regalo romántico",
+  "descripcion": "Incluye 1 vino rosado, copas y tapón",
+  "precio_compra": 50,
+  "precio_venta": 95,
+  "stock_actual": 10,
+  "id_categoria": 13,
+  "tipo_producto": "Accesorio",
+  "detalles_accesorio": {
+    "material": "Variado",
+    "color": "Rojo",
+    "dimensiones": "Caja 30x30cm",
+    "tipo_accesorio": "Kit"
+  }
+}]

@@ -1,0 +1,75 @@
+[{
+  "_id": 1,
+  "nombre_categoria": "Vino Tinto",
+  "descripcion": "Vinos elaborados con uvas tintas"
+},
+{
+  "_id": 2,
+  "nombre_categoria": "Accesorios",
+  "descripcion": "Productos complementarios como llaveros, copas, etc."
+},
+{
+  "_id": 3,
+  "nombre_categoria": "Vino Blanco",
+  "descripcion": "Vinos elaborados con uvas blancas, de sabor ligero y afrutado"
+},
+{
+  "_id": 4,
+  "nombre_categoria": "Vino Rosado",
+  "descripcion": "Vinos con tonalidades rosadas, resultado de un corto contacto con la piel de la uva"
+},
+{
+  "_id": 5,
+  "nombre_categoria": "Espumantes",
+  "descripcion": "Vinos con burbujas naturales o añadidas, como el Champagne"
+},
+{
+  "_id": 6,
+  "nombre_categoria": "Abridores",
+  "descripcion": "Accesorios para abrir botellas de vino"
+},
+{
+  "_id": 7,
+  "nombre_categoria": "Decantadores",
+  "descripcion": "Recipientes especiales para airear el vino antes de servir"
+},
+{
+  "_id": 8,
+  "nombre_categoria": "Cajas de regalo",
+  "descripcion": "Presentaciones elegantes para obsequiar vinos y accesorios"
+},
+{
+  "_id": 9,
+  "nombre_categoria": "Copas",
+  "descripcion": "Copas de vino, cristal, vidrio o plástico"
+},
+{
+  "_id": 10,
+  "nombre_categoria": "Tapones",
+  "descripcion": "Tapones reutilizables para cerrar botellas"
+},
+{
+  "_id": 11,
+  "nombre_categoria": "Termómetros",
+  "descripcion": "Accesorios para medir temperatura del vino"
+},
+{
+  "_id": 12,
+  "nombre_categoria": "Libros de cata",
+  "descripcion": "Guías y registros para amantes del vino"
+},
+{
+  "_id": 13,
+  "nombre_categoria": "Kits de regalo",
+  "descripcion": "Conjuntos de vino y accesorios en estuche"
+},
+{
+  "_id": 14,
+  "nombre_categoria": "Vino Espumoso",
+  "descripcion": "Vinos espumantes distintos a Champagne"
+},
+{
+  "_id": 15,
+  "nombre_categoria": "Vino Dulce",
+  "descripcion": "Vinos con mayor concentración de azúcar"
+}]

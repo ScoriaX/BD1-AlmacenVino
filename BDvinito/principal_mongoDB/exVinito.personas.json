@@ -1,0 +1,150 @@
+[{
+  "_id": 1,
+  "nombre": "Carlos Gómez",
+  "id_documento": 1,
+  "numero_documento": "12345678",
+  "tipo_persona": "Cliente",
+  "correo": "carlos@gmail.com",
+  "telefono": "999888777",
+  "direccion": "Av. Lima 123"
+},
+{
+  "_id": 2,
+  "nombre": "Bodega San Pedro",
+  "id_documento": 2,
+  "numero_documento": "20456789012",
+  "tipo_persona": "Proveedor",
+  "correo": "ventas@sanpedro.pe",
+  "telefono": "945678345",
+  "direccion": "Camino del vino 34"
+},
+{
+  "_id": 4,
+  "nombre": "María Fernanda Ruiz",
+  "id_documento": 1,
+  "numero_documento": "11223344",
+  "tipo_persona": "Cliente",
+  "correo": "maria.ruiz@gmail.com",
+  "telefono": "987654321",
+  "direccion": "Calle Los Álamos 101"
+},
+{
+  "_id": 5,
+  "nombre": "Don Vinos Import S.A.",
+  "id_documento": 2,
+  "numero_documento": "20459999123",
+  "tipo_persona": "Proveedor",
+  "correo": "ventas@donvinos.pe",
+  "telefono": "944321987",
+  "direccion": "Av. Uvas y Robles 234"
+},
+{
+  "_id": 6,
+  "nombre": "Pedro López",
+  "id_documento": 1,
+  "numero_documento": "55667788",
+  "tipo_persona": "Empleado",
+  "correo": "pedro.lopez@vinito.pe",
+  "telefono": "945987654",
+  "direccion": "Pasaje Las Viñas 45"
+},
+{
+  "_id": 7,
+  "nombre": "Julia Castillo",
+  "id_documento": 1,
+  "numero_documento": "44556677",
+  "tipo_persona": "Cliente",
+  "correo": "julia.castillo@gmail.com",
+  "telefono": "912345678",
+  "direccion": "Av. Colonial 900"
+},
+{
+  "_id": 8,
+  "nombre": "Distribuciones El Sommelier",
+  "id_documento": 2,
+  "numero_documento": "20998877665",
+  "tipo_persona": "Proveedor",
+  "correo": "contacto@elsommelier.com",
+  "telefono": "941112223",
+  "direccion": "Jr. de los Olivos 678"
+},
+{
+  "_id": 9,
+  "nombre": "Andrés Quiroz",
+  "id_documento": 1,
+  "numero_documento": "99887766",
+  "tipo_persona": "Cliente",
+  "correo": "andres.quiroz@gmail.com",
+  "telefono": "955667788",
+  "direccion": "Calle Italia 111"
+},
+{
+  "_id": 10,
+  "nombre": "Luis Torres",
+  "id_documento": 1,
+  "numero_documento": "23456789",
+  "tipo_persona": "Cliente",
+  "correo": "luis.torres@gmail.com",
+  "telefono": "988776655",
+  "direccion": "Av. Grau 123"
+},
+{
+  "_id": 11,
+  "nombre": "Sofía Núñez",
+  "id_documento": 1,
+  "numero_documento": "34567890",
+  "tipo_persona": "Cliente",
+  "correo": "sofia.nunez@gmail.com",
+  "telefono": "911122233",
+  "direccion": "Jr. Las Palmas 45"
+},
+{
+  "_id": 12,
+  "nombre": "Viña del Valle",
+  "id_documento": 2,
+  "numero_documento": "20559988776",
+  "tipo_persona": "Proveedor",
+  "correo": "contacto@vallevino.com",
+  "telefono": "943321789",
+  "direccion": "Av. Campo de Viñas 12"
+},
+{
+  "_id": 13,
+  "nombre": "Carmen Díaz",
+  "id_documento": 1,
+  "numero_documento": "77889900",
+  "tipo_persona": "Cliente",
+  "correo": "carmen.diaz@gmail.com",
+  "telefono": "999223344",
+  "direccion": "Av. Pisco 333"
+},
+{
+  "_id": 14,
+  "nombre": "Elena Salazar",
+  "id_documento": 1,
+  "numero_documento": "11221122",
+  "tipo_persona": "Cliente",
+  "correo": "elena.salazar@gmail.com",
+  "telefono": "922334455",
+  "direccion": "Calle Aroma del Vino 77"
+},
+{
+  "_id": 15,
+  "nombre": "Pierito",
+  "id_documento": 1,
+  "numero_documento": "66778899",
+  "tipo_persona": "VIP",
+  "correo": "jose.morales@gmail.com",
+  "telefono": "955112233",
+  "direccion": "Jr. Moquegua 56"
+},
+{
+  "_id": 16,
+  "nombre": "Uvas del Sol",
+  "id_documento": 2,
+  "numero_documento": "20997766554",
+  "tipo_persona": "Proveedor",
+  "correo": "ventas@uvasdelsol.pe",
+  "telefono": "944555666",
+  "direccion": "Carretera Panamericana 890"
+}]

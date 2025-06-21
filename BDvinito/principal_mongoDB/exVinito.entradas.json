@@ -1,0 +1,52 @@
+[{
+  "_id": 2,
+  "id_persona": 12,
+  "fecha": {
+    "$date": "2024-06-01T00:00:00.000Z"
+  },
+  "tipo_entrada": "Compra",
+  "total": 800,
+  "detalle": [
+    {
+      "id_producto": 12,
+      "cantidad": 20,
+      "precio_unitario": 19,
+      "subtotal": 380
+    },
+    {
+      "id_producto": 13,
+      "cantidad": 10,
+      "precio_unitario": 21,
+      "subtotal": 210
+    },
+    {
+      "id_producto": 10,
+      "cantidad": 35,
+      "precio_unitario": 3,
+      "subtotal": 105
+    }
+  ]
+},
+{
+  "_id": 3,
+  "id_persona": 16,
+  "fecha": {
+    "$date": "2024-06-03T00:00:00.000Z"
+  },
+  "tipo_entrada": "Compra",
+  "total": 500,
+  "detalle": [
+    {
+      "id_producto": 14,
+      "cantidad": 5,
+      "precio_unitario": 50,
+      "subtotal": 250
+    },
+    {
+      "id_producto": 11,
+      "cantidad": 30,
+      "precio_unitario": 6,
+      "subtotal": 180
+    }
+  ]
+}]

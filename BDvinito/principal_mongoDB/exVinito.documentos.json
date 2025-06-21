@@ -1,0 +1,35 @@
+[{
+  "_id": 1,
+  "tipo_documento": "DNI",
+  "longitud": 8
+},
+{
+  "_id": 2,
+  "tipo_documento": "RUC",
+  "longitud": 11
+},
+{
+  "_id": 3,
+  "tipo_documento": "Carnet de Extranjería",
+  "longitud": 9
+},
+{
+  "_id": 4,
+  "tipo_documento": "Pasaporte",
+  "longitud": 12
+},
+{
+  "_id": 5,
+  "tipo_documento": "Licencia de Conducir",
+  "longitud": 10
+},
+{
+  "_id": 6,
+  "tipo_documento": "Cédula de Identidad",
+  "longitud": 10
+},
+{
+  "_id": 7,
+  "tipo_documento": "Documento Militar",
+  "longitud": 8
+}]
