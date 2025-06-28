@@ -2,7 +2,7 @@
 
 ## Alumnos
 - Piero Fabricio Poblete Andía. (ppobletea@ulasalle.edu.pe)
-- Allsion Mayra Usedo Quispe.
+- Allsion Mayra Usedo Quispe. (ausedoq@ulasalle.edu.pe)
 
 ---
 
