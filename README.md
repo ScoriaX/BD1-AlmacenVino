@@ -1,7 +1,7 @@
 # BD1-AlmacenVino
 
 ## Alumnos
-- Piero Fabricio Poblete Andía.
+- Piero Fabricio Poblete Andía. (ppobletea@ulasalle.edu.pe)
 - Allsion Mayra Usedo Quispe.
 
 ---
