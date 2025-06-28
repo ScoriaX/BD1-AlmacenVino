@@ -19,13 +19,13 @@ EXEC EliminarDocumentoIdentidad
 
 -- INSERTAR PERSONA
 EXEC InsertarPersona 
-    @nombre = 'Piero', 
-    @apellido_paterno = 'Poulette', 
-    @apellido_materno = 'Sandia', 
+    @nombre = 'Allison', 
+    @apellido_paterno = 'Usedo', 
+    @apellido_materno = 'Quispe', 
     @id_documento = 1, 
-    @numero_documento = '72417465', 
+    @numero_documento = '72557690',
     @tipo_persona = 'Empleado', 
-    @correo = 'ppobletea@gmail.com', 
+    @correo = 'allsion@gmail.com', 
     @telefono = '965117966', 
     @direccion = 'Guardia Civil',
 	@fecha_contratacion = '2025-06-25',
@@ -150,8 +150,8 @@ EXEC ReporteEntradas;
 
 -- INSERTAR ROLES
 EXEC InsertarRol 
-    @nombre_rol = 'Administrador',
-    @descripcion = 'Acceso completo al sistema.';
+    @nombre_rol = 'Invitado',
+    @descripcion = 'Acceso limitado.';
 
 -- INSETAR PERMISO
 EXEC InsertarPermiso 
@@ -164,17 +164,17 @@ EXEC InsertarPermiso
 
 -- ASIGNAR PERMISO
 EXEC AsignarPermisoARol 
-    @id_rol = 1,
+    @id_rol = 2,
     @id_permiso = 1;
 
 EXEC AsignarPermisoARol 
-    @id_rol = 1,
+    @id_rol = 2,
     @id_permiso = 2;
 
 -- ASIGNAR ROL EMPLEADO
 EXEC AsignarRolAEmpleado 
     @id_persona = 2,
-    @id_rol = 1;
+    @id_rol = 2;
 
 -- MOSTRAR ROLES x EMPLEADO
 EXEC VerRolesEmpleado 

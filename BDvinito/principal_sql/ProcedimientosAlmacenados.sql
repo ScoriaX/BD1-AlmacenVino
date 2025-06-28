@@ -739,9 +739,10 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    SELECT r.id_rol, r.nombre_rol, r.descripcion
+    SELECT pe.id_persona, pe.nombre, pe.apellido_paterno, pe.apellido_materno ,r.id_rol, r.nombre_rol, r.descripcion
     FROM Rol r
     JOIN Empleado_Rol er ON r.id_rol = er.id_rol
+	JOIN Persona pe ON e.id_persona = pe.id_persona
     WHERE er.id_persona = @id_persona;
 END;
 GO
