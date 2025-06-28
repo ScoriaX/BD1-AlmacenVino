@@ -40,6 +40,15 @@ CREATE TABLE Proveedor (
     CONSTRAINT FK_Proveedor_Persona FOREIGN KEY (id_persona) REFERENCES Persona(id_persona)
 );
 
+CREATE TABLE Empleado (
+    id_persona INT PRIMARY KEY,
+    fecha_contratacion DATE NOT NULL,
+    puesto VARCHAR(50) NOT NULL,
+    salario MONEY NOT NULL,
+
+    CONSTRAINT FK_Empleado_Persona FOREIGN KEY (id_persona) REFERENCES Persona(id_persona)
+);
+
 CREATE TABLE Categoria (
     id_categoria INT PRIMARY KEY IDENTITY(1,1),
     nombre_categoria VARCHAR(30) NOT NULL UNIQUE,
@@ -130,8 +139,39 @@ CREATE TABLE Historico (
     id_registro INT NOT NULL,                  
     accion VARCHAR(10) NOT NULL,               
     fecha_hora DATETIME DEFAULT GETDATE(),     
-    usuario VARCHAR(50),                       
-    descripcion TEXT                           
+    id_empleado INT,
+    descripcion TEXT,
+
+    CONSTRAINT FK_Historico_Empleado FOREIGN KEY (id_empleado) REFERENCES Empleado(id_persona)
 );
 
+CREATE TABLE Rol (
+    id_rol INT PRIMARY KEY IDENTITY(1,1),
+    nombre_rol VARCHAR(50) NOT NULL UNIQUE,
+    descripcion TEXT
+);
+
+CREATE TABLE Permiso (
+    id_permiso INT PRIMARY KEY IDENTITY(1,1),
+    nombre_permiso VARCHAR(50) NOT NULL UNIQUE,
+    descripcion TEXT
+);
+
+CREATE TABLE Rol_Permiso (
+    id_rol INT NOT NULL,
+    id_permiso INT NOT NULL,
+
+    PRIMARY KEY (id_rol, id_permiso),
+    FOREIGN KEY (id_rol) REFERENCES Rol(id_rol),
+    FOREIGN KEY (id_permiso) REFERENCES Permiso(id_permiso)
+);
+
+CREATE TABLE Empleado_Rol (
+    id_persona INT NOT NULL,
+    id_rol INT NOT NULL,
+
+    PRIMARY KEY (id_persona, id_rol),
+    FOREIGN KEY (id_persona) REFERENCES Empleado(id_persona),
+    FOREIGN KEY (id_rol) REFERENCES Rol(id_rol)
+);
 

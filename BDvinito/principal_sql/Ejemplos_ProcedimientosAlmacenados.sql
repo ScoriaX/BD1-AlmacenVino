@@ -20,14 +20,17 @@ EXEC EliminarDocumentoIdentidad
 -- INSERTAR PERSONA
 EXEC InsertarPersona 
     @nombre = 'Piero', 
-    @apellido_paterno = 'Poblete', 
-    @apellido_materno = 'Andia', 
+    @apellido_paterno = 'Poulette', 
+    @apellido_materno = 'Sandia', 
     @id_documento = 1, 
-    @numero_documento = '72439496', 
-    @tipo_persona = 'Cliente', 
+    @numero_documento = '72417465', 
+    @tipo_persona = 'Empleado', 
     @correo = 'ppobletea@gmail.com', 
     @telefono = '965117966', 
-    @direccion = 'Guardia Civil';
+    @direccion = 'Guardia Civil',
+	@fecha_contratacion = '2025-06-25',
+    @puesto = 'Cajero',
+    @salario = 1000;
 
 -- MODIFICAR PERSONA
 EXEC ModificarPersona 
@@ -130,6 +133,12 @@ EXEC EliminarVenta
 -- REPORTE CLIENTES
 EXEC ReporteClientes;
 
+-- REPORTE PROVEEDORES
+EXEC ReporteProveedores;
+
+-- REPORTE EMPLEADOS
+EXEC ReporteEmpleados;
+
 -- REPORTE PRODUCTOS EN STOCK
 EXEC ReporteProductosEnStock;
 
@@ -138,3 +147,40 @@ EXEC ReporteVentas;
 
 -- REPORTE ENTRADAS
 EXEC ReporteEntradas;
+
+-- INSERTAR ROLES
+EXEC InsertarRol 
+    @nombre_rol = 'Administrador',
+    @descripcion = 'Acceso completo al sistema.';
+
+-- INSETAR PERMISO
+EXEC InsertarPermiso 
+    @nombre_permiso = 'RegistrarVenta',
+    @descripcion = 'Permite registrar ventas.';
+
+EXEC InsertarPermiso 
+    @nombre_permiso = 'RegistrarEntrada',
+    @descripcion = 'Permite registrar entradas de productos.';
+
+-- ASIGNAR PERMISO
+EXEC AsignarPermisoARol 
+    @id_rol = 1,
+    @id_permiso = 1;
+
+EXEC AsignarPermisoARol 
+    @id_rol = 1,
+    @id_permiso = 2;
+
+-- ASIGNAR ROL EMPLEADO
+EXEC AsignarRolAEmpleado 
+    @id_persona = 2,
+    @id_rol = 1;
+
+-- MOSTRAR ROLES x EMPLEADO
+EXEC VerRolesEmpleado 
+    @id_persona = 2;
+
+-- MOSTRAR PERMISOS x EMPLEADO
+EXEC VerPermisosEmpleado 
+    @id_persona = 2;
+

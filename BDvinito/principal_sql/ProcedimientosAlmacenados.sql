@@ -79,7 +79,10 @@ CREATE PROCEDURE InsertarPersona
     @correo VARCHAR(50),
     @telefono VARCHAR(15),
     @direccion VARCHAR(100),
-    @empresa VARCHAR(100) = NULL
+    @empresa VARCHAR(100) = NULL,
+	@fecha_contratacion DATE = NULL,
+    @puesto VARCHAR(50) = NULL,
+    @salario MONEY = NULL
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -119,6 +122,11 @@ BEGIN
     BEGIN
         INSERT INTO Proveedor (id_persona, empresa)
         VALUES (@id_persona, @empresa);
+    END
+	ELSE IF @tipo_persona = 'Empleado'
+    BEGIN
+        INSERT INTO Empleado (id_persona, fecha_contratacion, puesto, salario)
+        VALUES (@id_persona, @fecha_contratacion, @puesto, @salario);
     END
 END;
 GO
@@ -570,6 +578,24 @@ BEGIN
 END;
 GO
 
+-- REPORTE EMPLEADOS
+CREATE PROCEDURE ReporteEmpleados
+AS
+BEGIN
+    SELECT 
+        p.id_persona,
+        p.nombre + ' ' + p.apellido_paterno + ' ' + p.apellido_materno AS nombre_completo,
+        p.numero_documento,
+        p.correo,
+        p.telefono,
+        em.fecha_contratacion,
+		em.puesto,
+		em.salario
+    FROM Empleado em
+    JOIN Persona p ON em.id_persona = p.id_persona;
+END;
+GO
+
 -- REPORTE PRODUCTOS EN STOCK
 CREATE PROCEDURE ReporteProductosEnStock
 AS
@@ -623,5 +649,114 @@ BEGIN
     JOIN Persona pe ON e.id_persona = pe.id_persona
     JOIN DetalleEntrada de ON e.id_entrada = de.id_entrada
     JOIN Producto pr ON de.id_producto = pr.id_producto;
+END;
+GO
+
+-- INSERTAR ROL
+CREATE PROCEDURE InsertarRol
+    @nombre_rol VARCHAR(50),
+    @descripcion TEXT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM Rol WHERE nombre_rol = @nombre_rol)
+    BEGIN
+        RAISERROR('El rol ya existe.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO Rol (nombre_rol, descripcion)
+    VALUES (@nombre_rol, @descripcion);
+END;
+GO
+
+-- INSERTAR PERMISO
+CREATE PROCEDURE InsertarPermiso
+    @nombre_permiso VARCHAR(50),
+    @descripcion TEXT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (SELECT 1 FROM Permiso WHERE nombre_permiso = @nombre_permiso)
+    BEGIN
+        RAISERROR('El permiso ya existe.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO Permiso (nombre_permiso, descripcion)
+    VALUES (@nombre_permiso, @descripcion);
+END;
+GO
+
+-- ASIGNAR PERMISO x ROL
+CREATE PROCEDURE AsignarPermisoARol
+    @id_rol INT,
+    @id_permiso INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1 FROM Rol_Permiso WHERE id_rol = @id_rol AND id_permiso = @id_permiso
+    )
+    BEGIN
+        RAISERROR('El permiso ya está asignado al rol.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO Rol_Permiso (id_rol, id_permiso)
+    VALUES (@id_rol, @id_permiso);
+END;
+GO
+
+-- ASIGNAR ROL A EMPLEADO
+CREATE PROCEDURE AsignarRolAEmpleado
+    @id_persona INT,
+    @id_rol INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1 FROM Empleado_Rol WHERE id_persona = @id_persona AND id_rol = @id_rol
+    )
+    BEGIN
+        RAISERROR('El rol ya está asignado al empleado.', 16, 1);
+        RETURN;
+    END;
+
+    INSERT INTO Empleado_Rol (id_persona, id_rol)
+    VALUES (@id_persona, @id_rol);
+END;
+GO
+
+-- MOSTRAR ROLES x EMPLEADO
+CREATE PROCEDURE VerRolesEmpleado
+    @id_persona INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT r.id_rol, r.nombre_rol, r.descripcion
+    FROM Rol r
+    JOIN Empleado_Rol er ON r.id_rol = er.id_rol
+    WHERE er.id_persona = @id_persona;
+END;
+GO
+
+-- MOSTRAR PERMISOS x EMPLEADO
+CREATE PROCEDURE VerPermisosEmpleado
+    @id_persona INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT p.id_permiso, p.nombre_permiso, p.descripcion
+    FROM Permiso p
+    JOIN Rol_Permiso rp ON p.id_permiso = rp.id_permiso
+    JOIN Empleado_Rol er ON rp.id_rol = er.id_rol
+    WHERE er.id_persona = @id_persona;
 END;
 GO
